@@ -26,6 +26,10 @@ A configuração do Vite usa caminhos relativos para que o build funcione em `/j
 
 No repositório GitHub, abra **Settings → Pages → Build and deployment** e escolha **Source: GitHub Actions**. Após enviar os arquivos para `main`, acompanhe o workflow **Publicar demonstração no GitHub Pages** na aba **Actions**. Quando a implantação terminar, use o endereço apresentado pelo GitHub Pages; o endereço previsto é `https://juniorrosivaldo.github.io/junior-gestao/`.
 
+Essa ativação inicial é obrigatória: o token padrão do workflow não cria um site do Pages. Se a consulta do site retornar `404 Not Found`, confira a ativação e a escolha de **GitHub Actions** antes de executar novamente. Em repositórios privados, a conta também precisa de um plano que ofereça GitHub Pages; se a página pedir upgrade ou mudança de visibilidade, essa decisão deve ser tomada pelo proprietário. Não é necessário adicionar um token pessoal para a publicação comum após a ativação.
+
+O build funciona independentemente da configuração do Pages. A consulta do site ocorre apenas no job de publicação. Os runners estão fixados em **Ubuntu 24.04** e as ações usam **Node.js 24**, com versões verificadas e fixadas por SHA.
+
 **Publicar o ambiente na nuvem não publica o site.** O ambiente prepara a máquina de desenvolvimento; o endereço público só fica disponível após a implantação do GitHub Pages. O site expõe os exemplos de demonstração incluídos no código. Alterações feitas por cada visitante continuam salvas apenas no navegador desse visitante.
 
 ## Funcionalidades
